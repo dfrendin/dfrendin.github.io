@@ -1,0 +1,103 @@
+input[type=text]
+{
+	font-family: 'forsvarsmakten-condensed';
+	border: none;
+	padding: 1rem;
+	font-size: 1rem;
+	display: inline-block;
+
+	background: fade(@aska-background-light, 80%);
+	color: @aska-text;
+	transition: background ease-in-out .12s;
+}
+
+input[type=text]:focus
+{
+	background: fade(@aska-background-light, 100%);
+}
+
+
+input[type=button]
+, button
+{
+	background: transparent;
+	color: #FFFFFF;
+	border: none;
+	padding: 1em;
+	font-size: 1.2em;
+	font-family: 'forsvarsmakten-condensed';
+}
+
+input[type=button].raised
+, button.raised
+{
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+input[type=button].radar
+, button.radar
+{
+	color: @radar;
+}
+
+input[type=button].skarp
+, button.skarp
+{
+	color: @skarp;
+}
+
+input[type=button].signal
+, button.signal
+{
+	color: @signal;
+}
+
+input[type=button].klaff
+, button.klaff
+{
+	color: @klaff;
+}
+
+input[type=button].radar.raised
+, button.radar.raised
+{
+	color: #fff;
+	background: @radar;
+}
+
+input[type=button].skarp.raised
+, button.skarp.raised
+{
+	color: #fff;
+	background: @skarp;
+}
+
+input[type=button].signal.raised
+, button.signal.raised
+{
+	color: #fff;
+	background: @signal;
+}
+
+input[type=button].klaff.raised
+, button.klaff.raised
+{
+	color: #fff;
+	background: @klaff;
+}
+
+fieldset
+{
+	margin: 0;
+	padding: 0;
+	margin-bottom: 1rem;
+	border: none;
+}
+
+
+fieldset label
+{
+	display: block;
+	font-family: 'forsvarsmakten-condensed';
+	font-size: 1rem;
+}

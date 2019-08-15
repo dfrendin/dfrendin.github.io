@@ -1,0 +1,2 @@
+lessc theme/theme.less theme.css && lessc base/base.less base.css
+#lessc theme/theme.less theme.css && lessc base/base.less base.css && lessc theme/theme.less theme.min.css -x && lessc base/base.less base.min.css -x

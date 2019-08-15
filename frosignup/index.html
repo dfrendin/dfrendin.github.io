@@ -1,0 +1,161 @@
+<html lang="en" >
+<head>
+	<title>FRO Medlemsansökan</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="mobile-web-app-capable" content="yes" />
+	<!-- Angular Material style sheet -->
+	<link rel="stylesheet" href="assets/node_modules/angular-material/angular-material.min.css">
+	<link rel="stylesheet" href="assets/css/theme.css">
+  
+	<link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png" />
+	<link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png" />
+	<link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png" />
+	<link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png" />
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png" />
+	<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-icon-192x192.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
+	<link rel="manifest" href="assets/favicon/manifest.json" />
+	<meta name="msapplication-TileColor" content="#8E8785" />
+	<meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png" />
+	<meta name="theme-color" content="#8E8785" />
+
+</head>
+<body ng-app="BlankApp" ng-cloak style="position: relative;" class="theme-jord">
+
+
+<div style="position: absolute; height: 100%; width: 100%; z-index: 0;">
+    <div id="foglayer_01" class="fog">
+	   <div class="image01"></div>
+	   <div class="image02"></div>
+    </div>
+    <div id="foglayer_02" class="fog">
+	   <div class="image01"></div>
+	   <div class="image02"></div>
+    </div>  
+    <div id="foglayer_03" class="fog">
+	   <div class="image01"></div>
+	   <div class="image02"></div>
+    </div>
+</div>
+
+
+<div id="viewport" class="flex-vrow">
+
+<div id="container-main" class="flex-row flex-col">
+
+<section id="section-branding" class="flex-vrow">
+<div class="flex-col"></div>
+<div style="font-size: 48px; font-weight: 700; text-align: center;">FRO</div>
+<div>
+<img src="assets/images/fro-round.png" />
+</div>
+<div style="text-align: center;">Radio, tele och data i samhällets tjänst</div>
+<div class="flex-col"></div>
+</section>
+
+<section id="section-content" class="flex-col">
+
+
+<div class="flex-col">
+<h1>Medlemsansökan</h1>
+
+<div class="flex-row subheader" style="margin-bottom: 1rem;">
+<div class="active">Personuppgifter</div>
+<div>Kontaktuppgifter</div>
+<div>Välkommen!</div>
+</div>
+
+<fieldset>
+	<label>
+		Förnamn, Efternamn
+	</label>
+	<div class="flex-row">
+		<input type="text" class="flex-col">
+	</div>
+</fieldset>
+
+<fieldset>
+	<label>
+		Personnummer (yyyymmdd-nnnn)
+	</label>
+	<div class="flex-row">
+		<input type="text" class="flex-col">
+	</div>
+</fieldset>
+
+<fieldset>
+	<div class="flex-row">
+		<label class="flex-col" style="margin-right: .5em;">
+			Nationalitet (medborgarskap)
+		</label>
+		<label class="flex-col" style="margin-left: .5em;">
+			Dubbelt medborgarskap?
+		</label>
+	</div>
+	<div class="flex-row">
+		<input type="text" class="flex-col" style="margin-right: .5em;">
+		<input type="text" class="flex-col" style="margin-left: .5em;">
+	</div>
+</fieldset>
+
+
+<div style="margin-top: 1em; color: #393E40;">
+	Vid ansökan om medlemskap intygar du att dina uppgifter är korrekta, godkänner att vi lagrar och behandlar dina personuppgifter i FROs register samt förbinder dig att följa <a href="#">FRO Grundstadgar</a>.
+</div>
+
+
+<div class="flex-row">
+<div class="flex-col"></div>
+<button class="raised radar">
+Spara och fortsätt
+<i class="fas fa-angle-right"></i>
+</button>
+</div>
+</div>
+
+
+
+
+</section>
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+<footer style="position: fixed; bottom: 0; left: 0; right: 1rem; text-align: right; padding: .5rem; font-size: .8rem;">
+Producerad av David Frendin för FRO Jönköping, copyright &copy; 2019
+</footer>
+
+  
+  <!-- Angular Material requires Angular.js Libraries -->
+  <script src="assets/node_modules/angular/angular.min.js"></script>
+  <script src="assets/node_modules/angular-animate/angular-animate.min.js"></script>
+  <script src="assets/node_modules/angular-aria/angular-aria.min.js"></script>
+  <script src="assets/node_modules/angular-messages/angular-messages.min.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src="assets/node_modules/angular-material/angular-material.min.js"></script>
+  
+  <!-- Your application bootstrap  -->
+  <script type="text/javascript">    
+    /**
+     * You must include the dependency on 'ngMaterial' 
+     */
+    angular.module('BlankApp', ['ngMaterial', 'ngMessages']);
+  </script>
+
+</body>
+</html>

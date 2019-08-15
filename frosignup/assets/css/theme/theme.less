@@ -1,0 +1,144 @@
+@import "../base/base.less";
+@import "foglayer.less";
+
+
+
+
+
+html
+{
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+
+body
+{
+	background: linear-gradient(fade(@jord, 30%), fade(@jord, 30%)), url('../images/landscape-nature-forest-wilderness-mountain-cloud-89733-pxhere.com.jpg') no-repeat;
+	//background: #545F66 url('../images/landscape-nature-forest-wilderness-mountain-cloud-89733-pxhere.com.jpg') no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	overflow: hidden;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+
+#container-main
+{
+	width: 100%;
+	max-width: 1024px;
+	margin: auto;
+}
+
+.flex-row
+{
+	display: flex;
+}
+
+.flex-vrow
+{
+	display: flex;
+	flex-direction: column;
+}
+
+.flex-col
+{
+	flex: 1;
+}
+
+
+
+.subheader
+{
+	font-family: forsvarsmakten-condensed;
+	font-weight: 700;
+}
+
+.subheader div
+{
+	padding-right: 1em;
+	opacity: .6;
+	color: #393E40;
+	font-size: 1.4em;
+}
+
+.subheader .active
+{
+	opacity: 1;
+}
+
+
+
+/*
+	Sections
+*/
+#section-footer
+{
+	padding: 1em;
+	margin-top: 1em;
+	font-family: forsvarsmakten-condensed;
+	color: @hav-text-light;
+	text-align: right;
+	font-size: .8em;
+	display: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: .3;
+}
+
+#section-branding
+{
+	width: 100%;
+	max-width: 300px;
+	padding: 2em;
+	background: rgba(255,255,255,.2);
+	font-size: 18px;
+	font-family: 'forsvarsmakten-condensed';
+	color: #393E40;
+}
+
+#section-branding img
+{
+	max-width: 100%;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+#section-content
+{
+	padding: 2em;
+}
+
+
+
+
+
+
+
+
+
+body.theme-jord
+{
+	h1
+	{
+		color: @jord-text;
+	}
+}
+
+
+
+#viewport
+{
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	overflow-y: scroll;
+}
