@@ -26,7 +26,7 @@
 	<meta name="theme-color" content="#8E8785" />
 
 </head>
-<body ng-app="BlankApp" ng-cloak style="position: relative;" class="theme-jord">
+<body ng-app="BlankApp" ng-controller="signupCtrl" ng-cloak style="position: relative;" class="theme-jord">
 
 
 <div style="position: absolute; height: 100%; width: 100%; z-index: 0;">
@@ -47,86 +47,143 @@
 
 <div id="viewport" class="flex-vrow">
 
-<div id="container-main" class="flex-row flex-col">
+	<div id="container-main" class="flex-row flex-col">
 
-<section id="section-branding" class="flex-vrow">
-<div class="flex-col"></div>
-<div style="font-size: 48px; font-weight: 700; text-align: center;">FRO</div>
-<div>
-<img src="assets/images/fro-round.png" />
-</div>
-<div style="text-align: center;">Radio, tele och data i samhällets tjänst</div>
-<div class="flex-col"></div>
-</section>
+		<section id="section-branding" class="flex-vrow">
+			<div class="flex-col"></div>
+			<div style="font-size: 48px; font-weight: 700; text-align: center;">FRO</div>
+			<div>
+				<img src="assets/images/fro-round.png" />
+			</div>
+			<div style="text-align: center;">Radio, tele och data i samhällets tjänst</div>
+			<div class="flex-col"></div>
+		</section>
 
-<section id="section-content" class="flex-col">
+		<section id="section-content" class="flex-col" ng-show="vm == 1">
+			<div class="flex-col">
+				<h1>Medlemsansökan</h1>
+				<div class="flex-row subheader" style="margin-bottom: 1rem;">
+				<div class="active">Personuppgifter</div>
+				<div>Kontaktuppgifter</div>
+				<div>Välkommen!</div>
+				</div>
+
+				<fieldset>
+					<label>
+						Förnamn, Efternamn
+					</label>
+					<div class="flex-row">
+						<input type="text" class="flex-col" ng-model="registerModel.name" />
+					</div>
+				</fieldset>
+
+				<fieldset>
+					<label>
+						Personnummer (yyyymmdd-nnnn)
+					</label>
+					<div class="flex-row">
+						<input type="text" class="flex-col" ng-model="registerModel.pno" />
+					</div>
+				</fieldset>
+
+				<fieldset>
+					<div class="flex-row">
+						<label class="flex-col" style="margin-right: .5em;">
+							Nationalitet (medborgarskap)
+						</label>
+						<label class="flex-col" style="margin-left: .5em;">
+							Dubbelt medborgarskap?
+						</label>
+					</div>
+					<div class="flex-row">
+						<input type="text" class="flex-col" style="margin-right: .5em;" ng-model="registerModel.citizenship1" />
+						<input type="text" class="flex-col" style="margin-left: .5em;" ng-model="registerModel.citizenship2" />
+					</div>
+				</fieldset>
+
+				<div class="flex-row">
+					<div class="flex-col"></div>
+					<button class="raised radar" ng-click="vm = 2">
+						Nästa
+						<i class="fas fa-angle-right"></i>
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<section id="section-content" class="flex-col" ng-show="vm == 2" ng-cloak>
+		
+			<div class="flex-col">
+				<h1>Medlemsansökan</h1>
+				<div class="flex-row subheader" style="margin-bottom: 1rem;">
+				<div>Personuppgifter</div>
+				<div class="active">Kontaktuppgifter</div>
+				<div>Välkommen!</div>
+				</div>
+
+				<fieldset>
+					<label>
+						Gata
+					</label>
+					<div class="flex-row">
+						<input type="text" class="flex-col" ng-model="registerModel.street" />
+					</div>
+				</fieldset>
+				<fieldset>
+					<div class="flex-row">
+						<label class="flex-col" style="margin-right: .5em;">
+							Postnummer
+						</label>
+						<label class="flex-col" style="margin-left: .5em;">
+							Stad
+						</label>
+					</div>
+					<div class="flex-row">
+						<input type="text" class="flex-col" style="margin-right: .5em;" ng-model="registerModel.zipcode" />
+						<input type="text" class="flex-col" style="margin-left: .5em;" ng-model="registerModel.city" />
+					</div>
+				</fieldset>
+				<fieldset>
+					<label>
+						Telefon
+					</label>
+					<div class="flex-row">
+						<input type="text" class="flex-col" ng-model="registerModel.phone" />
+					</div>
+				</fieldset>
+				<fieldset>
+					<label>
+						E-post
+					</label>
+					<div class="flex-row">
+						<input type="text" class="flex-col" ng-model="registerModel.email" />
+					</div>
+				</fieldset>
+			</div>
+			
+			<p style="margin-top: 1em; color: #393E40;">
+				Vid ansökan om medlemskap intygar du att dina uppgifter är korrekta, godkänner att vi lagrar och behandlar dina personuppgifter i FROs register samt förbinder dig att följa <a href="#">FRO Grundstadgar</a>.
+			</p>
+
+			<div class="flex-row">
+				<button class="" ng-click="vm = 1">
+					<i class="fas fa-angle-left"></i>
+					Tillbaka
+				</button>
+				<div class="flex-col"></div>
+				<button class="raised radar" ng-click="vm = 2">
+					Spara ansökan
+					<i class="fas fa-paper-plane"></i>
+				</button>
+			</div>
+
+		
+		
+			<!--<p>{{registerModel}}</p>-->
+		</section>
 
 
-<div class="flex-col">
-<h1>Medlemsansökan</h1>
-
-<div class="flex-row subheader" style="margin-bottom: 1rem;">
-<div class="active">Personuppgifter</div>
-<div>Kontaktuppgifter</div>
-<div>Välkommen!</div>
-</div>
-
-<fieldset>
-	<label>
-		Förnamn, Efternamn
-	</label>
-	<div class="flex-row">
-		<input type="text" class="flex-col">
 	</div>
-</fieldset>
-
-<fieldset>
-	<label>
-		Personnummer (yyyymmdd-nnnn)
-	</label>
-	<div class="flex-row">
-		<input type="text" class="flex-col">
-	</div>
-</fieldset>
-
-<fieldset>
-	<div class="flex-row">
-		<label class="flex-col" style="margin-right: .5em;">
-			Nationalitet (medborgarskap)
-		</label>
-		<label class="flex-col" style="margin-left: .5em;">
-			Dubbelt medborgarskap?
-		</label>
-	</div>
-	<div class="flex-row">
-		<input type="text" class="flex-col" style="margin-right: .5em;">
-		<input type="text" class="flex-col" style="margin-left: .5em;">
-	</div>
-</fieldset>
-
-
-<div style="margin-top: 1em; color: #393E40;">
-	Vid ansökan om medlemskap intygar du att dina uppgifter är korrekta, godkänner att vi lagrar och behandlar dina personuppgifter i FROs register samt förbinder dig att följa <a href="#">FRO Grundstadgar</a>.
-</div>
-
-
-<div class="flex-row">
-<div class="flex-col"></div>
-<button class="raised radar">
-Spara och fortsätt
-<i class="fas fa-angle-right"></i>
-</button>
-</div>
-</div>
-
-
-
-
-</section>
-
-
-
-</div>
 
 
 
@@ -154,7 +211,15 @@ Producerad av David Frendin för FRO Jönköping, copyright &copy; 2019
     /**
      * You must include the dependency on 'ngMaterial' 
      */
-    angular.module('BlankApp', ['ngMaterial', 'ngMessages']);
+    var app = angular.module('BlankApp', ['ngMaterial', 'ngMessages']);
+
+	app.controller('signupCtrl', function($scope)
+	{
+		$scope.vm = 1;
+		
+		$scope.registerModel = { name: '', pno: '', citizenship1: 'SVERIGE', citizenship2: '' };
+	});
+	
   </script>
 
 </body>
